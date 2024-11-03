@@ -6,7 +6,7 @@ exports.createDonation = async (req, res) => {
 
   try {
     const paymentIntent = await stripe.paymentIntents.create({
-      amount: amount * 100, // Convertendo para centavos
+      amount: amount * 100,
       currency: 'usd',
       receipt_email: email,
     });
