@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doe+</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-color: #fff;
+    }
+    
+    .container {
+      max-width: 700px;
+      width: 100%;
+      background-color: #f89ca0;
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+    }
+    
+    .form-container {
+      flex: 1;
+      padding: 20px;
+      color: #333;
+    }
+    
+    .form-container h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    
+    .form-container p {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+    
+    .form-container form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    
+    .form-container input {
+      width: calc(50% - 10px);
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    
+    .form-container input[type="submit"] {
+      width: 100%;
+      background-color: #ff6978;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 4px;
+      margin-top: 10px;
+    }
+    
+    .form-container input[type="submit"]:hover {
+      background-color: #ff515a;
+    }
+    
+    .info-container {
+      display: flex;
+      justify-content: space-around;
+      background-color: #ffb3b5;
+      padding: 10px;
+      color: #fff;
+      text-align: center;
+      font-size: 16px;
+    }
+    
+    .info-container div {
+      font-weight: bold;
+    }
+    
+    .image-container {
+      background-image: url('coracao.jpg');
+      background-size: cover;
+      background-position: center;
+      flex: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="form-container">
+      <h1>Quem está doando?</h1>
+      <p>Preencha os campos abaixo para concluir sua doação.</p>
+      <form>
+        <input type="text" placeholder="Primeiro Nome*" required>
+        <input type="text" placeholder="Sobrenome*" required>
+        <input type="text" placeholder="CPF*" required>
+        <input type="email" placeholder="Email*" required>
+        <input type="submit" value="Continuar">
+      </form>
+      <div class="info-container">
+        <div>26<br>Estados atendidos</div>
+        <div>100+<br>Pessoas a serem salvas</div>
+      </div>
+    </div>
+    <div class="image-container"></div>
+  </div>
+</body>
+</html>
