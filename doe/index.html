@@ -18,6 +18,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: relative;
         }
         .header img {
             height: 50px;
@@ -27,7 +28,34 @@
             margin: 0 15px;
             text-decoration: none;
             font-weight: bold;
+            position: relative;
         }
+        /* Estilo da barra de contato oculta */
+        .contact-dropdown {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background-color: #fff;
+            border: 1px solid #f28b82;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            color: #333;
+            width: 200px;
+            font-size: 14px;
+            text-align: left;
+            z-index: 1;
+        }
+        .contact-dropdown p {
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        /* Exibir a barra ao passar o mouse em "Contato" */
+        .header nav a:hover .contact-dropdown {
+            display: block;
+        }
+
         .main {
             display: flex;
             justify-content: space-between;
@@ -80,16 +108,28 @@
     <header class="header">
         <img src="logo.png" alt="Doe+ Logo">
         <nav>
-            <a href="#">Instituições</a>
-            <a href="#">Contato</a>
-            <a href="#">Doar</a>
+            <a href="#">
+                Instituições
+                <div class="contact-dropdown">
+                    Mais informações em breve</p>
+                </div>
+            </a>
+            <a href="#">
+                Contato
+                <div class="contact-dropdown">
+                    <p>Telefone: (11) 98765-4321</p>
+                    <p>Email: contato@doemais.org</p>
+                    <p>Endereço: Rua da Facimp, 123, imperatriz-MA</p>
+                </div>
+            </a>
+            <a href="cadastro.html">Doar</a>
         </nav>
     </header>
     <main class="main">
         <div class="text">
             <h1>Doe + para + vidas salvas</h1>
             <p>A organização Doe+ tem como finalidade promover direcionamento das doações para os locais corretos e garantir que vidas sejam mudadas e transformadas através da sua doação.</p>
-            <button>Vamos começar?</button>
+            <a href="cadastro.html"><button>Vamos começar?</button></a>
         </div>
         <div class="image">
             <img src="img3.jpg" alt="Hands holding a heart">

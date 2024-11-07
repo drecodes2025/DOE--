@@ -13,20 +13,20 @@
       padding: 0;
       font-family: Arial, sans-serif;
     }
-    
+
     html, body {
       width: 100%;
       height: 100%;
       overflow: hidden;
     }
-    
+
     .container {
       display: flex;
       width: 100%;
       height: 100%;
       background-color: #f89ca0;
     }
-    
+
     .form-container {
       width: 50%;
       padding: 40px;
@@ -36,31 +36,31 @@
       justify-content: center;
       align-items: center;
     }
-    
+
     .form-container img.logo {
       width: 150px;
       margin-bottom: 20px;
     }
-    
+
     .form-container h1 {
       font-size: 32px;
       margin-bottom: 10px;
     }
-    
+
     .form-container p {
       font-size: 18px;
       color: #555;
       margin-bottom: 20px;
       text-align: center;
     }
-    
+
     .form-container form {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
       justify-content: center;
     }
-    
+
     .form-container input {
       width: calc(50% - 10px);
       padding: 15px;
@@ -68,7 +68,7 @@
       border-radius: 4px;
       font-size: 16px;
     }
-    
+
     .form-container input[type="submit"] {
       width: 100%;
       background-color: #ff6978;
@@ -80,11 +80,11 @@
       border-radius: 4px;
       margin-top: 10px;
     }
-    
+
     .form-container input[type="submit"]:hover {
       background-color: #ff515a;
     }
-    
+
     .info-container {
       display: flex;
       justify-content: space-around;
@@ -95,16 +95,53 @@
       font-size: 18px;
       margin-top: 20px;
     }
-    
+
     .info-container div {
       font-weight: bold;
     }
-    
+
     .image-container {
       width: 50%;
-      background-image: url('coracao.jpg');
+      background-image: url('coracao.JPEG'); 
       background-size: cover;
       background-position: center;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* Media Queries para responsividade */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        height: auto;
+      }
+
+      .form-container, .image-container {
+        width: 100%;
+      }
+
+      .form-container {
+        padding: 20px;
+      }
+
+      .form-container input {
+        width: 100%;
+      }
+
+      .form-container h1 {
+        font-size: 28px;
+      }
+
+      .form-container p {
+        font-size: 16px;
+      }
+
+      .info-container {
+        flex-direction: column;
+        font-size: 16px;
+      }
     }
   </style>
 </head>
@@ -115,11 +152,11 @@
       
       <h1>Quem está doando?</h1>
       <p>Preencha os campos abaixo para concluir sua doação.</p>
-      <form>
-        <input type="text" placeholder="Primeiro Nome*" required>
-        <input type="text" placeholder="Sobrenome*" required>
-        <input type="text" placeholder="CPF*" required>
-        <input type="email" placeholder="Email*" required>
+      <form onsubmit="return redirectUser(event)">
+        <input type="text" placeholder="Primeiro Nome*" >
+        <input type="text" placeholder="Sobrenome*" >
+        <input type="text" placeholder="CPF*" >
+        <input type="email" placeholder="Email*" >
         <input type="submit" value="Continuar">
       </form>
       <div class="info-container">
@@ -129,5 +166,12 @@
     </div>
     <div class="image-container"></div>
   </div>
+
+  <script>
+    function redirectUser(event) {
+      event.preventDefault(); // Impede o comportamento padrão de envio do formulário
+      window.location.href = "institutos.html"; // Redireciona para instituicoes.html
+    }
+  </script>
 </body>
 </html>
