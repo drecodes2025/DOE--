@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icone.png" type="image/png">
+    <title>Doe+</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .header {
+            background-color: #f28b82;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+        .Login {
+            align-items: left; 
+            font-size: 17px;
+            left: 20px;
+            
+        }
+        .header img {
+            height: 50px;
+        }
+        .header nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            position: relative;
+        }
+        /* Estilo da barra de contato oculta */
+        .contact-dropdown {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background-color: #fff;
+            border: 1px solid #f28b82;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            color: #333;
+            width: 200px;
+            font-size: 14px;
+            text-align: left;
+            z-index: 1;
+        }
+        .contact-dropdown p {
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        /* Exibir a barra ao passar o mouse em "Contato" */
+        .header nav a:hover .contact-dropdown {
+            display: block;
+        }
+        
+        .main {
+            display: flex;
+            justify-content: space-between;
+            padding: 50px;
+            background-color: white;
+        }
+        .main .text {
+            max-width: 50%;
+        }
+        .main .text h1 {
+            font-size: 36px;
+            color: #333;
+        }
+        .main .text p {
+            font-size: 18px;
+            color: #666;
+        }
+        .main .text button {
+            background-color: #f28b82;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .main .image {
+            max-width: 40%;
+        }
+        .main .image img {
+            width: 110%;
+        }
+        .footer {
+            background-color: #f28b82;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .footer div {
+            display: inline-block;
+            margin: 0 20px;
+        }
+        .footer div span {
+            display: block;
+            font-size: 36px;
+            font-weight: bold;
+        }
+        .wrapper {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="wrapper"> 
+        <img src="logo1.png" alt="Doe+ Logo">
+        <div class="login"> <form action="/submit_login" method="post"> <label for="username">Username:</label> <input type="text" id="username" name="username" required> <label for="password">Password:</label> <input type="password" id="password" name="password" required> <button type="submit">Login</button> </form> </div>
+        </div>
+        <nav>
+            
+            <a href="cadastrodeinstitutos.html">
+                Instituições
+                <div class="contact-dropdown">
+                    Mais informações em breve</p>
+                </div>
+            </a>
+            <a href="#">
+                Contato
+                <div class="contact-dropdown">
+                    <p>Telefone: (11) 98765-4321</p>
+                    <p>Email: contato@doemais.org</p>
+                    <p>Endereço: Rua da Facimp, 123, imperatriz-MA</p>
+                </div>
+            </a>
+            <a href="cadastro.html">Doar</a>
+        </nav>
+    </header>
+    <main class="main">
+        <div class="text">
+            <h1>Doe + para + vidas salvas</h1>
+            <p>A organização Doe+ tem como finalidade promover direcionamento das doações para os locais corretos e garantir que vidas sejam mudadas e transformadas através da sua doação.</p>
+            <a href="cadastro.html"><button>Vamos começar?</button></a>
+        </div>
+        <div class="image">
+            <img src="img3.jpg" alt="Hands holding a heart">
+        </div>
+    </main>
+    <footer class="footer">
+        <div>
+            <span>26</span>
+            Estados atendidos
+        </div>
+        <div>
+            <span>100+</span>
+            Pessoas a serem salvas
+        </div>
+    </footer>
+</body>
+</html>
